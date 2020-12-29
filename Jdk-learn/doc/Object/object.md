@@ -38,6 +38,25 @@ public class Object{
     //直到调用notify()或者notifyAll()方法 或 等待时间已过
     //timeout 等待时间(毫秒)
     public final native void wait(long timeout) throws InterruptedException;
+    
+    //当前线程等待timeout毫秒 如果 nanos大于0 多等待1毫秒
+    public final void wait(long timeout, int nanos) throws InterruptedException{
+       if (timeout < 0) {
+           throw new IllegalArgumentException("timeout value is negative");
+       }
+
+       if (nanos < 0 || nanos > 999999) {
+           throw new IllegalArgumentException(
+                               "nanosecond timeout value out of range");
+       }
+
+       if (nanos > 0) {
+           timeout++;
+       }
+
+       wait(timeout);
+   }
+
 }
  
 
