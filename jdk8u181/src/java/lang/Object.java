@@ -26,7 +26,9 @@
 package java.lang;
 
 /**
- *类{@code Object}是类层次结构的根。每个类都有{@code Object}作为超类。所有对象（包括数组）都实现此类的方法。
+ * Class {@code Object} is the root of the class hierarchy.
+ * Every class has {@code Object} as a superclass. All objects,
+ * including arrays, implement the methods of this class.
  *
  * @author  unascribed
  * @see     java.lang.Class
@@ -40,43 +42,74 @@ public class Object {
     }
 
     /**
-     *返回此{@code Object}的运行时类。返回的{@code Class}对象是被表示的类的{@code static sync}方法锁定的对象。
+     * Returns the runtime class of this {@code Object}. The returned
+     * {@code Class} object is the object that is locked by {@code
+     * static synchronized} methods of the represented class.
      *
-     *<p> <b>实际结果类型为{@code Class <？扩展| X |>}，其中{@code | X |}是在其上调用{@code getClass}的表达式的静态类型的擦除。<b>
-     *     例如，此代码段中不需要强制转换：< >
+     * 返回此{@code Object}的运行时类。
+     * 返回的{@code Class}对象是被表示的类的{@code static sync}方法锁定的对象。
+     *
+     * <p><b>The actual result type is {@code Class<? extends |X|>}
+     * where {@code |X|} is the erasure of the static type of the
+     * expression on which {@code getClass} is called.</b> For
+     * example, no cast is required in this code fragment:</p>
+     *
+     * <b>实际结果类型为{@code Class <？扩展| X |>}，其中{@code |X|}
+     * 删除了调用{@code getClass}的表达式的静态类型。</b>
+     * 例如，此代码段中不需要强制转换：
      *
      * <p>
      * {@code Number n = 0;                             }<br>
      * {@code Class<? extends Number> c = n.getClass(); }
      * </p>
      *
-     * @return代表此对象的运行时类的{@code Class}对象。
+     * @return The {@code Class} object that represents the runtime
+     *         class of this object.
+     *
+     * @return 代表此对象的运行时类的{@code Class}对象。
+     *
      * @jls 15.8.2 Class Literals
      */
     public final native Class<?> getClass();
 
     /**
+     *
      * Returns a hash code value for the object. This method is
      * supported for the benefit of hash tables such as those provided by
-     * {@link java.util.HashMap}.
+     *
+     * 返回对象的哈希码值。支持此方法是为了使哈希表受益，例如{@link java.util.HashMap}提供的哈希表。
      * <p>
-     * The general contract of {@code hashCode} is:
+     * {@code hashCode}的一般约定为：
      * <ul>
      * <li>Whenever it is invoked on the same object more than once during
      *     an execution of a Java application, the {@code hashCode} method
      *     must consistently return the same integer, provided no information
      *     used in {@code equals} comparisons on the object is modified.
+     *
+     *     只要在Java应用程序执行期间在同一对象上多次调用它,{@ code hashCode}方法就必须始终返回相同的整数,前提是在该对象的{@code equals}比较中使用的信息没有被修改。
+     *
      *     This integer need not remain consistent from one execution of an
      *     application to another execution of the same application.
+     *
+     *     从一个应用程序的执行到同一应用程序的另一执行，此整数不必保持一致。
+     *
      * <li>If two objects are equal according to the {@code equals(Object)}
      *     method, then calling the {@code hashCode} method on each of
      *     the two objects must produce the same integer result.
-     * <li>It is <em>not</em> required that if two objects are unequal
+     *
+     *     如果根据{@code equals（Object）}方法两个对象相等，则在两个对象中的每个对象上调用{@code hashCode}方法必须产生相同的整数结果。
+     *
+     * <li>It is not required that if two objects are unequal
      *     according to the {@link java.lang.Object#equals(java.lang.Object)}
      *     method, then calling the {@code hashCode} method on each of the
      *     two objects must produce distinct integer results.  However, the
      *     programmer should be aware that producing distinct integer results
      *     for unequal objects may improve the performance of hash tables.
+     *
+     *  根据{@link java.lang.Object#equals(java.lang.Object)}方法，
+     *  如果两个对象不相等，则不需要在两个对象中的每个对象上调用{@code hashCode}方法必须产生不同的整数结果。
+     *  但是，程序员应该意识到，为不相等的对象生成不同的整数结果可能会提高哈希表的性能。
+     *
      * </ul>
      * <p>
      * As much as is reasonably practical, the hashCode method defined by
@@ -86,7 +119,11 @@ public class Object {
      * technique is not required by the
      * Java&trade; programming language.)
      *
+     * 在合理可行的范围内，由类{@code Object}定义的hashCode方法确实为不同的对象返回不同的整数。
+     * (这通常是通过将对象的内部地址转换为整数来实现的，但是Java™编程语言不需要此实现技术。)
+     *
      * @return  a hash code value for this object.
+     * @return 此对象的哈希码值。
      * @see     java.lang.Object#equals(java.lang.Object)
      * @see     java.lang.System#identityHashCode
      */
@@ -94,28 +131,45 @@ public class Object {
 
     /**
      * Indicates whether some other object is "equal to" this one.
+     * 指示其他某个对象是否“等于”该对象。
      * <p>
      * The {@code equals} method implements an equivalence relation
      * on non-null object references:
+     * {@code equals}方法对非null对象引用实现等效关系：
      * <ul>
-     * <li>It is <i>reflexive</i>: for any non-null reference value
+     * <li>It is reflexive: for any non-null reference value
      *     {@code x}, {@code x.equals(x)} should return
      *     {@code true}.
-     * <li>It is <i>symmetric</i>: for any non-null reference values
+     *
+     *     这是自反的：对于任何非空参考值{@code x}，{@code x.equals（x）}应该返回{@code true}。
+     *
+     * <li>It is symmetric: for any non-null reference values
      *     {@code x} and {@code y}, {@code x.equals(y)}
      *     should return {@code true} if and only if
      *     {@code y.equals(x)} returns {@code true}.
-     * <li>It is <i>transitive</i>: for any non-null reference values
+     *
+     *     它是对称的：对于任何非空参考值{@code x}和{@code y},
+     *     当{@code x.equals(y)} 应当返回 {@code true}
+     *     当且仅当{@code y.equlas(x)} 返回 {@code true}.
+     *
+     * <li>It is transitive: for any non-null reference values
      *     {@code x}, {@code y}, and {@code z}, if
      *     {@code x.equals(y)} returns {@code true} and
      *     {@code y.equals(z)} returns {@code true}, then
      *     {@code x.equals(z)} should return {@code true}.
-     * <li>It is <i>consistent</i>: for any non-null reference values
+     *
+     *     它是可传递的：对于任何非空参考值
+     *     {@code x},{@code y}and {@code z}
+     *     如果 {@code x.equals(y)} 返回 {@code true}
+     *
+     *
+     * <li>It is consistent(一致的): for any non-null reference values(对于任何非空的参考值)
      *     {@code x} and {@code y}, multiple invocations of
      *     {@code x.equals(y)} consistently return {@code true}
-     *     or consistently return {@code false}, provided no
+     *     or consistently(始终) return {@code false}, provided no
      *     information used in {@code equals} comparisons on the
      *     objects is modified.
+     *     前提 没有修改 equlas
      * <li>For any non-null reference value {@code x},
      *     {@code x.equals(null)} should return {@code false}.
      * </ul>
