@@ -26,9 +26,7 @@
 package java.lang;
 
 /**
- * Class {@code Object} is the root of the class hierarchy.
- * Every class has {@code Object} as a superclass. All objects,
- * including arrays, implement the methods of this class.
+ *类{@code Object}是类层次结构的根。每个类都有{@code Object}作为超类。所有对象（包括数组）都实现此类的方法。
  *
  * @author  unascribed
  * @see     java.lang.Class
@@ -42,22 +40,17 @@ public class Object {
     }
 
     /**
-     * Returns the runtime class of this {@code Object}. The returned
-     * {@code Class} object is the object that is locked by {@code
-     * static synchronized} methods of the represented class.
+     *返回此{@code Object}的运行时类。返回的{@code Class}对象是被表示的类的{@code static sync}方法锁定的对象。
      *
-     * <p><b>The actual result type is {@code Class<? extends |X|>}
-     * where {@code |X|} is the erasure of the static type of the
-     * expression on which {@code getClass} is called.</b> For
-     * example, no cast is required in this code fragment:</p>
+     *<p> <b>实际结果类型为{@code Class <？扩展| X |>}，其中{@code | X |}是在其上调用{@code getClass}的表达式的静态类型的擦除。<b>
+     *     例如，此代码段中不需要强制转换：< >
      *
      * <p>
      * {@code Number n = 0;                             }<br>
      * {@code Class<? extends Number> c = n.getClass(); }
      * </p>
      *
-     * @return The {@code Class} object that represents the runtime
-     *         class of this object.
+     * @return代表此对象的运行时类的{@code Class}对象。
      * @jls 15.8.2 Class Literals
      */
     public final native Class<?> getClass();
