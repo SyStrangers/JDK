@@ -41,11 +41,11 @@ import java.util.regex.PatternSyntaxException;
 
 /**
  * The {@code String} class represents character strings. All
- * string literals in Java programs, such as {@code "abc"}, are
+ * string literals(文字) in Java programs, such as {@code "abc"}, are
  * implemented as instances of this class.
  * <p>
- * Strings are constant; their values cannot be changed after they
- * are created. String buffers support mutable strings.
+ * Strings are constant(不变的); their(其) values cannot be changed after they
+ * are created. String buffers support(支持) mutable(改变) strings.
  * Because String objects are immutable they can be shared. For example:
  * <blockquote><pre>
  *     String str = "abc";
