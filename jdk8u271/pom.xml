@@ -13,6 +13,7 @@
     <groupId>com.stranger</groupId>
     <artifactId>jdk8u271</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
 
 
