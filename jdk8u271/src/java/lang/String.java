@@ -631,7 +631,7 @@ public final class String
      *
      * @since 1.6
      */
-    public boolean isEmpty() {
+    public boolean isEmpty() { //判断 初始化的数组 的长度是否为0;
         return value.length == 0;
     }
 
@@ -653,8 +653,8 @@ public final class String
      *             argument is negative or not less than the length of this
      *             string.
      */
-    public char charAt(int index) {
-        if ((index < 0) || (index >= value.length)) {
+    public char charAt(int index) {//输出String 某一位的字符
+        if ((index < 0) || (index >= value.length)) {//这里判断 索引是否大于0 并且小于当前的长度
             throw new StringIndexOutOfBoundsException(index);
         }
         return value[index];
@@ -977,14 +977,14 @@ public final class String
         if (this == anObject) {
             return true;
         }
-        if (anObject instanceof String) {
-            String anotherString = (String)anObject;
+        if (anObject instanceof String) {//判断类型是否为String
+            String anotherString = (String)anObject;//强转成String
             int n = value.length;
-            if (n == anotherString.value.length) {
+            if (n == anotherString.value.length) {//比较字符串长度是否相等
                 char v1[] = value;
                 char v2[] = anotherString.value;
                 int i = 0;
-                while (n-- != 0) {
+                while (n-- != 0) {//n为字符串长度 一直执行到字符串长度为0
                     if (v1[i] != v2[i])
                         return false;
                     i++;
