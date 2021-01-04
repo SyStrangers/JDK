@@ -13,6 +13,6 @@ public class StringTest {
         str.isEmpty();
         //字符串比较  先比较 当前对象跟传入的是不是同一个对象
         str.equals("");
-
+        System.out.println(String.valueOf(6553838));;
     }
 }
