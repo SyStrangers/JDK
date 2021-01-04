@@ -1,4 +1,4 @@
-package com.test.string;
+package com.test.lang;
 
 import java.util.Objects;
 

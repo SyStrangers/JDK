@@ -1,4 +1,4 @@
-package com.test.Object;
+package com.test.lang;
 
 
 public class ObjectTest {
