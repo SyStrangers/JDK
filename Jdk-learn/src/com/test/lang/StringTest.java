@@ -2,8 +2,6 @@ package com.test.lang;
 
 import sun.misc.FloatingDecimal;
 
-import java.util.Objects;
-
 public class StringTest {
     public static void main(String[] args) {
         //底层为 char数组 初始化的时候把内容放进char[] value 中
