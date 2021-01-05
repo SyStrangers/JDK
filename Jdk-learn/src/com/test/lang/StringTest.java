@@ -18,6 +18,7 @@ public class StringTest {
 //        System.out.println(656*64+656*32+656*4);
 //        System.out.println((655<<6)+(655<<5)+(655<<2));
 //        System.out.println((65530 * 52429) >>> (16+3));
-        System.out.println(FloatingDecimal.toJavaFormatString(1.000F));
+//        System.out.println(FloatingDecimal.toJavaFormatString(1.000F));
+        System.out.println(1<<1); //1*2
     }
 }
