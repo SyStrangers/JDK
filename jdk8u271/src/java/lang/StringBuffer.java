@@ -102,6 +102,9 @@ import java.util.Arrays;
     /**
      * A cache of the last value returned by toString. Cleared
      * whenever the StringBuffer is modified.
+     *
+     *
+     * transient is not Serializable
      */
     private transient char[] toStringCache;
 
@@ -111,6 +114,8 @@ import java.util.Arrays;
     /**
      * Constructs a string buffer with no characters in it and an
      * initial capacity of 16 characters.
+     *
+     * 初始容量为16
      */
     public StringBuffer() {
         super(16);
