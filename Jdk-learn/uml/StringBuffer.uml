@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>java.lang.StringBuffer</OriginalElement>
+  <nodes>
+    <node x="168.0" y="0.0">java.lang.CharSequence</node>
+    <node x="0.0" y="0.0">java.lang.Appendable</node>
+    <node x="210.0" y="214.0">java.lang.StringBuffer</node>
+    <node x="9.5" y="107.0">java.lang.AbstractStringBuilder</node>
+    <node x="304.5" y="107.0">java.io.Serializable</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="java.lang.StringBuffer" target="java.io.Serializable">
+      <point x="56.0" y="-28.5" />
+      <point x="350.0" y="189.0" />
+      <point x="388.5" y="189.0" />
+      <point x="0.0" y="28.5" />
+    </edge>
+    <edge source="java.lang.StringBuffer" target="java.lang.AbstractStringBuilder">
+      <point x="-56.0" y="-28.5" />
+      <point x="238.0" y="189.0" />
+      <point x="138.5" y="189.0" />
+      <point x="0.0" y="28.5" />
+    </edge>
+    <edge source="java.lang.StringBuffer" target="java.lang.CharSequence">
+      <point x="0.0" y="-28.5" />
+      <point x="42.0" y="28.5" />
+    </edge>
+    <edge source="java.lang.AbstractStringBuilder" target="java.lang.CharSequence">
+      <point x="64.5" y="-28.5" />
+      <point x="203.0" y="82.0" />
+      <point x="210.0" y="82.0" />
+      <point x="-42.0" y="28.5" />
+    </edge>
+    <edge source="java.lang.AbstractStringBuilder" target="java.lang.Appendable">
+      <point x="-64.5" y="-28.5" />
+      <point x="0.0" y="28.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="236.5" y="135.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
