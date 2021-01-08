@@ -3,4 +3,5 @@
 ```text
 Object
 String
+StringBuffer
 ```
