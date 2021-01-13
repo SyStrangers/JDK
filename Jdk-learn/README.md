@@ -4,4 +4,5 @@
 Object
 String
 StringBuffer
+Boolean
 ```
