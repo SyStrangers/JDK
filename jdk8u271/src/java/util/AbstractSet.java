@@ -30,12 +30,11 @@ package java.util;
  * interface to minimize the effort required to implement this
  * interface. <p>
  *
- * The process of implementing a set by extending this class is identical
+ * The process(过程) of implementing(实现) a set by extending(继承) this class is identical(相同)
  * to that of implementing a Collection by extending AbstractCollection,
- * except that all of the methods and constructors in subclasses of this
- * class must obey the additional constraints imposed by the <tt>Set</tt>
- * interface (for instance, the add method must not permit addition of
- * multiple instances of an object to a set).<p>
+ * except(除了) that all of the methods and constructors(构造函数) in subclasses(子类) of this
+ * class must(必须) obey(遵守) the additional(额外的) constraints(约束条件) imposed(强加) by the <tt>Set</tt>
+ * interface (for instance(例子), the add method must not permit addition of
  *
  * Note that this class does not override any of the implementations from
  * the <tt>AbstractCollection</tt> class.  It merely adds implementations
