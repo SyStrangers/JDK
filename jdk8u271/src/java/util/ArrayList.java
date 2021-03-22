@@ -102,6 +102,10 @@ import sun.misc.SharedSecrets;
  * @see     LinkedList
  * @see     Vector
  * @since   1.2
+ *
+ * RandomAcess 标志接口 为了实现快速访问
+ * Cloneable 深度拷贝标志接口 重写 clone 必须得实现
+ * Serializable 序列化接口
  */
 
 public class ArrayList<E> extends AbstractList<E>
@@ -110,7 +114,7 @@ public class ArrayList<E> extends AbstractList<E>
     private static final long serialVersionUID = 8683452581122892189L;
 
     /**
-     * Default initial capacity.
+     * Default initial(最初的) capacity(容量).
      */
     private static final int DEFAULT_CAPACITY = 10;
 
@@ -142,7 +146,7 @@ public class ArrayList<E> extends AbstractList<E>
     private int size;
 
     /**
-     * Constructs an empty list with the specified initial capacity.
+     * Constructs an empty list with the specified(制定) initial capacity.
      *
      * @param  initialCapacity  the initial capacity of the list
      * @throws IllegalArgumentException if the specified initial capacity
